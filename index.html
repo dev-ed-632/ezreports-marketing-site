@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ezreports: The ultimate reporting dashboard for sales, customer, project, status, financial, operations, marketing, and product reports. Create dynamic, customizable reports from Excel and CSV data sources.">
+  <meta name="keywords" content="Reports, Reporting, Dashboard reports, Manager reports, Sales reports, Customer Reports, Project reports, Status reports, Financial reports, Operations reports, Marketing reports, Product report">
+  <meta name="author" content="ezreports">
+  <title>ezreports | Dynamic Reporting Dashboard</title>
+  <link rel="icon" href="images/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: linear-gradient(180deg, #f8fafd 0%, #e3e8ff 100%);">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <img src="images/logo.png" alt="ezreports logo" width="40" height="40" class="me-2">
+        <span class="fw-bold fs-3" style="color: var(--color-primary, #1a1a40); font-family: 'Poppins', Inter, Arial, sans-serif;">ezreports</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how-it-works">How it Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section position-relative pb-5" style="padding: 0; overflow: visible;">
+    <div class="hero-gradient-bg d-flex flex-column justify-content-center align-items-center">
+      <div id="particles-js" class="position-absolute w-100 z-3" style="inset: 0; pointer-events: auto; z-index: 2;"></div>
+      <div class="container position-relative z-3 text-center d-flex flex-column align-items-center justify-content-center" style="height: 100%;">
+        <div class="hero-content">
+          <h1 class="hero-title fw-bold mb-4">
+            Transform Your Data<br>
+            Into <span class="hero-title-highlight-blue">Professional</span><br>
+            <span class="hero-title-highlight-purple">Reports</span> in Minutes
+          </h1>
+          <p class="hero-lead lead mb-5">
+            Upload any dataset, choose from multiple report templates, and generate stunning visualizations with charts, graphs, and tables. No technical skills required – just drag, drop, and create.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#" class="btn btn-cta-primary px-4 py-2 fw-semibold">Start Free Trial</a>
+            <a href="#" class="btn btn-cta-dark px-4 py-2 fw-semibold d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-play-circle me-2" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm3.5 7a.5.5 0 0 1-.5.5H6.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L6.707 7.5H11a.5.5 0 0 1 .5.5z"/></svg>
+              Watch Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .hero-gradient-bg { min-height: 480px; }
+      .hero-highlight {
+        display: inline-block;
+        padding: 0.1em 0.5em;
+        border-radius: 1.2em;
+        background: linear-gradient(90deg, #00b8a9 0%, #00bcd4 100%);
+        color: #fff;
+        font-weight: 700;
+        box-shadow: 0 2px 12px #00bcd433;
+        font-size: 1.1em;
+        letter-spacing: 0.01em;
+      }
+      .hero-dashboard-img {
+        margin-top: 0;
+        border-radius: 2rem;
+        box-shadow: 0 8px 48px rgba(0,0,0,0.18);
+        background: #fff;
+      }
+      .hero-section nav a {
+        font-size: 1.08rem;
+        color: #e0f7fa;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .hero-section nav a:hover, .hero-section nav a.btn {
+        color: #fff;
+      }
+      @media (max-width: 991px) {
+        .hero-section nav { flex-direction: column; gap: 0.7rem; }
+        .hero-dashboard-img { max-width: 98vw; }
+        .hero-gradient-bg { min-height: 320px; height: 60vh; }
+      }
+      @media (max-width: 767px) {
+        .hero-section { min-height: 70vh; }
+        .display-2 { font-size: 2rem; }
+        .hero-dashboard-img { border-radius: 1.2rem; }
+        .hero-gradient-bg { min-height: 200px; height: 48vh; }
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.particlesJS) {
+          particlesJS('particles-js', {
+            particles: {
+              number: { value: 80, density: { enable: true, value_area: 900 } },
+              color: { value: ["#fff", "#6a85f1", "#7b5fd6", "#3b82f6"] },
+              shape: { type: "circle" },
+              opacity: { value: 0.35, random: true },
+              size: { value: 6, random: true },
+              line_linked: { enable: true, distance: 120, color: "#00bcd4", opacity: 0.12, width: 1 },
+              move: { enable: true, speed: 1.2, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+            },
+            interactivity: {
+              detect_on: "window",
+              events: {
+                onhover: { enable: true, mode: "repulse" },
+                onclick: { enable: true, mode: "push" },
+                resize: true
+              },
+              modes: {
+                repulse: { distance: 80, duration: 0.4 },
+                push: { particles_nb: 4 }
+              }
+            },
+            retina_detect: true
+          });
+        }
+      });
+    </script>
+  </section>
+
+  <!-- Floating Dashboard Image -->
+  <div class="dashboard-float-container">
+    <img src="images/figma_images/Dashboard.png" alt="Dashboard preview" class="dashboard-float-img" />
+  </div>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-5">Innovative features for smarter workflows</h2>
+      <div class="features-grid">
+        <!-- Universal Data Upload -->
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-green animate-bounce">
+            <i class="bi bi-cloud-arrow-up"></i>
+          </div>
+          <div class="feature-content">
+            <h5 class="feature-title">Universal Data Upload</h5>
+            <p class="feature-desc">Support for 50+ file formats including CSV, Excel, JSON, XML, Parquet, and SQL dumps. Automatic data cleaning and transformation with intelligent column mapping.</p>
+            <div class="feature-badges">
+              <span class="feature-badge feature-badge-blue">CSV</span>
+              <span class="feature-badge feature-badge-green">Excel</span>
+              <span class="feature-badge feature-badge-blue">JSON</span>
+              <span class="feature-badge feature-badge-purple">XML</span>
+              <span class="feature-badge feature-badge-gray">+46 more</span>
+            </div>
+          </div>
+        </div>
+        <!-- Intelligent Report Generation -->
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-blue animate-bounce">
+            <i class="bi bi-file-earmark-bar-graph"></i>
+          </div>
+          <div class="feature-content">
+            <h5 class="feature-title">Intelligent Report Generation</h5>
+            <p class="feature-desc">Create professional reports with predefined templates or custom configurations. Export to PDF, Excel, or CSV with one click.</p>
+            <div class="feature-badges">
+              <span class="feature-badge feature-badge-yellow"><i class="bi bi-lightning-charge"></i> 10x Faster Generation</span>
+              <span class="feature-badge feature-badge-orange"><i class="bi bi-layout-text-window"></i> Custom Templates</span>
+            </div>
+          </div>
+        </div>
+        <!-- Advanced Visualizations -->
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-purple animate-bounce">
+            <i class="bi bi-bar-chart"></i>
+          </div>
+          <div class="feature-content">
+            <h5 class="feature-title">Advanced Visualizations</h5>
+            <p class="feature-desc">Create stunning charts and graphs with our comprehensive visualization library. Interactive dashboards with real-time filtering and dynamic updates.</p>
+            <div class="feature-badges">
+              <span class="feature-badge feature-badge-blue">Bar Charts</span>
+              <span class="feature-badge feature-badge-green">Line Charts</span>
+              <span class="feature-badge feature-badge-yellow">Pie Charts</span>
+              <span class="feature-badge feature-badge-purple">Heat Maps</span>
+            </div>
+          </div>
+        </div>
+        <!-- Custom Rule Engine -->
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-orange animate-bounce">
+            <i class="bi bi-clipboard-check"></i>
+          </div>
+          <div class="feature-content">
+            <h5 class="feature-title">Custom Rule Engine</h5>
+            <p class="feature-desc">Define custom formulas, calculations, and business rules. Set up conditional formatting and automated alerts based on your data thresholds.</p>
+            <div class="feature-code-block">IF sales &gt; $10,000 THEN highlight GREEN</div>
+          </div>
+        </div>
+        <!-- AI-Powered Analytics -->
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-pink animate-bounce">
+            <i class="bi bi-cpu"></i>
+          </div>
+          <div class="feature-content">
+            <h5 class="feature-title">AI-Powered Analytics</h5>
+            <p class="feature-desc">Leverage machine learning for predictive analytics, anomaly detection, and automated insights. Natural language queries to explore your data effortlessly.</p>
+            <div class="feature-badges">
+              <span class="feature-badge feature-badge-pink">Forecasting</span>
+              <span class="feature-badge feature-badge-red">Anomaly Detection</span>
+              <span class="feature-badge feature-badge-orange">Natural Language</span>
+            </div>
+          </div>
+        </div>
+        <!-- Enterprise Security -->
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-indigo animate-bounce">
+            <i class="bi bi-shield-lock"></i>
+          </div>
+          <div class="feature-content">
+            <h5 class="feature-title">Enterprise Security</h5>
+            <p class="feature-desc">Role-based access control with OAuth2 authentication. End-to-end encryption and compliance with industry security standards.</p>
+            <div class="feature-badges">
+              <span class="feature-badge feature-badge-purple">SOC 2</span>
+              <span class="feature-badge feature-badge-indigo">GDPR</span>
+              <span class="feature-badge feature-badge-blue">OAuth2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works: 5 Steps Section (Modern Stepper) -->
+  <section id="how-it-works" class="steps-section py-5">
+    <div class="container">
+      <div class="mb-2 text-primary fw-bold text-center" style="letter-spacing: 1px;">HOW IT WORKS</div>
+      <h2 class="fw-bold mb-4 text-center" style="font-size: 2.5rem;">How to Make <span class="text-primary">Reports</span> in 5 Steps</h2>
+      <p class="mb-5 text-center" style="max-width: 700px; margin: 0 auto;">Use ezreports to create reports for any need—business, sales, marketing, operations, and more. Our step-by-step process makes it easy to turn your data into actionable insights and beautiful dashboards.</p>
+      <div class="steps-horizontal-wrapper">
+        <div class="steps-cards-row" id="stepsCardsRow">
+          <!-- Step 1 -->
+          <div class="step-card" tabindex="0" data-step="1">
+            <div class="step-icon step-animate-bounce"> <!-- SVG Upload Icon -->
+              <svg width="48" height="48" fill="none" viewBox="0 0 48 48"><rect width="48" height="48" rx="16" fill="#e3e8ff"/><path d="M24 34V16M24 16l-6 6M24 16l6 6" stroke="#4d24aa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="12" y="36" width="24" height="2" rx="1" fill="#4d24aa"/></svg>
+            </div>
+            <div class="step-title">Step 1</div>
+            <div class="step-heading">Upload Your Data</div>
+            <div class="step-desc">Upload your data (Excel, CSV, etc.) and start a new report project.</div>
+          </div>
+          <!-- Step 2 -->
+          <div class="step-card" tabindex="0" data-step="2">
+            <div class="step-icon step-animate-fadein">
+              <svg width="48" height="48" fill="none" viewBox="0 0 48 48"><rect width="48" height="48" rx="16" fill="#e3e8ff"/><rect x="16" y="20" width="16" height="12" rx="2" fill="#4d24aa"/><rect x="20" y="16" width="8" height="4" rx="1" fill="#7b5fd6"/></svg>
+            </div>
+            <div class="step-title">Step 2</div>
+            <div class="step-heading">Choose a Template</div>
+            <div class="step-desc">Pick a template or start from scratch. Map your columns and set up your data.</div>
+          </div>
+          <!-- Step 3 -->
+          <div class="step-card" tabindex="0" data-step="3">
+            <div class="step-icon step-animate-bar">
+              <svg width="48" height="48" fill="none" viewBox="0 0 48 48"><rect width="48" height="48" rx="16" fill="#e3e8ff"/><rect x="16" y="28" width="4" height="8" rx="2" fill="#4d24aa"><animate attributeName="height" values="8;16;8" dur="1.2s" repeatCount="indefinite"/></rect><rect x="22" y="20" width="4" height="16" rx="2" fill="#7b5fd6"><animate attributeName="height" values="16;8;16" dur="1.2s" repeatCount="indefinite"/></rect><rect x="28" y="24" width="4" height="12" rx="2" fill="#4d24aa"><animate attributeName="height" values="12;20;12" dur="1.2s" repeatCount="indefinite"/></rect></svg>
+            </div>
+            <div class="step-title">Step 3</div>
+            <div class="step-heading">Customize Report</div>
+            <div class="step-desc">Add charts, tables, and visualizations to your report.</div>
+          </div>
+          <!-- Step 4 -->
+          <div class="step-card" tabindex="0" data-step="4">
+            <div class="step-icon step-animate-slideup">
+              <svg width="48" height="48" fill="none" viewBox="0 0 48 48"><rect width="48" height="48" rx="16" fill="#e3e8ff"/><path d="M16 32l8-8 8 8" stroke="#7b5fd6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><animate attributeName="d" values="M16 32l8-8 8 8;M16 28l8-8 8 12;M16 32l8-8 8 8" dur="1.2s" repeatCount="indefinite"/></path></svg>
+            </div>
+            <div class="step-title">Step 4</div>
+            <div class="step-heading">Preview & Fine-tune</div>
+            <div class="step-desc">Preview and fine-tune your report. Make sure everything looks perfect.</div>
+          </div>
+          <!-- Step 5 -->
+          <div class="step-card" tabindex="0" data-step="5">
+            <div class="step-icon step-animate-fadein">
+              <svg width="48" height="48" fill="none" viewBox="0 0 48 48"><rect width="48" height="48" rx="16" fill="#e3e8ff"/><rect x="16" y="20" width="16" height="8" rx="2" fill="#4d24aa"/><rect x="20" y="28" width="8" height="4" rx="1" fill="#7b5fd6"/></svg>
+            </div>
+            <div class="step-title">Step 5</div>
+            <div class="step-heading">Export & Share</div>
+            <div class="step-desc">Export, share, or schedule your report. Download as PDF, Excel, or share a link.</div>
+          </div>
+        </div>
+        <div class="steps-progress-bar-wrapper">
+          <div class="steps-progress-bar-bg"></div>
+          <div class="steps-progress-bar-fill" id="stepsProgressBar"></div>
+        </div>
+      </div>
+      <div id="stepTooltip" class="step-tooltip"></div>
+    </div>
+  </section>
+
+  
+
+  <!-- Product Features Section (keep as is) -->
+  <section id="product" class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold"><i class="bi bi-stars text-warning me-2"></i>Product Features</h2>
+        <p class="lead">Everything you need for <span class="fw-semibold text-primary">reporting</span>, <span class="fw-semibold text-success">dashboard creation</span>, and <span class="fw-semibold text-info">data visualization</span>.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="images/figma_images/Templates.png" class="card-img-top" alt="Templates">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-layout-text-window-reverse text-secondary me-2"></i>Customizable Templates</h5>
+              <p class="card-text">Choose from a variety of <span class="fw-semibold text-primary">report templates</span> for sales, projects, finance, and more. Tailor every detail to your needs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="images/figma_images/Report.png" class="card-img-top" alt="Report">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-kanban-fill text-success me-2"></i>Interactive Dashboards</h5>
+              <p class="card-text">Visualize your data with <span class="fw-semibold text-warning">charts</span>, <span class="fw-semibold text-secondary">tables</span>, and <span class="fw-semibold text-info">graphs</span>. Drag-and-drop widgets for a personalized dashboard experience.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="images/figma_images/Preview.png" class="card-img-top" alt="Preview">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-graph-up-arrow text-info me-2"></i>Real-Time Insights</h5>
+              <p class="card-text">Get instant feedback and <span class="fw-semibold text-success">real-time analytics</span> on your business performance. Export reports in PDF, Excel, or CSV.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col text-center">
+          <a href="#contact" class="btn btn-lg btn-success btn-gradient">Request a Demo <i class="bi bi-envelope-arrow-up ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Why Choose EZREPORT Section -->
+    <section id="why-choose" class="why-choose-section py-5">
+      <div class="container">
+        <h2 class="fw-bold text-center mb-2" style="font-size:2.5rem;">Why Choose EZREPORT?</h2>
+        <p class="lead text-center mb-4" style="max-width: 600px; margin: 0 auto;">See how EZREPORT compares to traditional reporting methods<br>and other solutions</p>
+        <div class="compare-toggle-group mb-4 d-flex justify-content-center gap-2">
+          <button class="compare-toggle active">vs Traditional Methods</button>
+          <button class="compare-toggle" disabled style="opacity:0.5;pointer-events:none;">vs Competitors</button>
+        </div>
+        <div class="compare-cards-row d-flex align-items-center justify-content-center mb-4 flex-wrap">
+          <div class="compare-card compare-card-left">
+            <div class="compare-icon compare-icon-bar animate-bounce">
+              <i class="bi bi-bar-chart-fill"></i>
+            </div>
+            <div class="compare-card-title">Traditional Methods</div>
+            <div class="compare-card-desc">Manual Excel/PowerPoint</div>
+          </div>
+          <div class="compare-vs-circle">VS</div>
+          <div class="compare-card compare-card-right">
+            <div class="compare-icon compare-icon-rocket animate-bounce">
+              <i class="bi bi-rocket-takeoff"></i>
+            </div>
+            <div class="compare-card-title">EZREPORT</div>
+            <div class="compare-card-desc">Automated Professional Reports</div>
+          </div>
+        </div>
+        <div class="compare-table">
+          <div class="compare-row">
+            <div class="compare-cell compare-cell-left">
+              <div class="compare-label">Time to Create Report</div>
+              <div class="compare-value compare-value-red">3-5 hours</div>
+              <div class="compare-sublabel">Manual data entry, formatting, chart creation</div>
+            </div>
+            <div class="compare-cell compare-cell-right">
+              <div class="compare-value compare-value-green">2-5 minutes</div>
+              <div class="compare-sublabel">Upload, select template, generate</div>
+            </div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell compare-cell-left">
+              <div class="compare-label">Data Format Support</div>
+              <div class="compare-value compare-value-red">Limited</div>
+              <div class="compare-sublabel">Mainly Excel, manual CSV import</div>
+            </div>
+            <div class="compare-cell compare-cell-right">
+              <div class="compare-value compare-value-green">50+ Formats</div>
+              <div class="compare-sublabel">CSV, Excel, JSON, XML, SQL, and more</div>
+            </div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell compare-cell-left">
+              <div class="compare-label">Professional Design</div>
+              <div class="compare-value compare-value-red">Inconsistent</div>
+              <div class="compare-sublabel">Depends on user design skills</div>
+            </div>
+            <div class="compare-cell compare-cell-right">
+              <div class="compare-value compare-value-green">Always Professional</div>
+              <div class="compare-sublabel">Pre-designed templates by experts</div>
+            </div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell compare-cell-left">
+              <div class="compare-label">Error Rate</div>
+              <div class="compare-value compare-value-red">High</div>
+              <div class="compare-sublabel">Manual calculations, copy-paste errors</div>
+            </div>
+            <div class="compare-cell compare-cell-right">
+              <div class="compare-value compare-value-green">Near Zero</div>
+              <div class="compare-sublabel">Automated processing, built-in validation</div>
+            </div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell compare-cell-left">
+              <div class="compare-label">Collaboration</div>
+              <div class="compare-value compare-value-red">Difficult</div>
+              <div class="compare-sublabel">Email attachments, version conflicts</div>
+            </div>
+            <div class="compare-cell compare-cell-right">
+              <div class="compare-value compare-value-green">Seamless</div>
+              <div class="compare-sublabel">Share links, real-time collaboration</div>
+            </div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell compare-cell-left">
+              <div class="compare-label">Scalability</div>
+              <div class="compare-value compare-value-red">Poor</div>
+              <div class="compare-sublabel">Time increases with data size</div>
+            </div>
+            <div class="compare-cell compare-cell-right">
+              <div class="compare-value compare-value-green">Excellent</div>
+              <div class="compare-sublabel">Handles large datasets automatically</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- CTA Section Above Pricing -->
+  <section class="cta-gradient-section d-flex align-items-center justify-content-center py-5">
+    <div class="cta-gradient-card w-100 mx-auto text-center">
+      <h2 class="fw-bold mb-4 display-5">Ready to Create Your First Report?</h2>
+      <p class="lead mb-5">Join thousands of professionals who trust EZREPORT for<br>their data visualization needs.</p>
+      <a href="#" class="btn btn-cta-primary btn-lg fw-bold px-5 py-3">Start Free Trial <i class="bi bi-arrow-right ms-2"></i></a>
+    </div>
+  </section>
+
+  <!-- Pricing Section (Homepage) -->
+  <section id="pricing" class="pricing-section">
+    <div class="container">
+      <h2 class="pricing-title text-center">Simple, Transparent Pricing</h2>
+      <p class="pricing-subtitle text-center">Choose the perfect plan for your team. Start free, upgrade<br>when you need more power.</p>
+      <div class="pricing-toggle-group d-flex justify-content-center align-items-center mb-5 gap-3">
+        <span class="pricing-toggle-label">Monthly</span>
+        <label class="pricing-switch">
+          <input type="checkbox" disabled>
+          <span class="pricing-slider"></span>
+        </label>
+        <span class="pricing-toggle-label">Annual <span class="pricing-save">Save 20%</span></span>
+      </div>
+      <div class="pricing-cards-row">
+        <!-- Starter -->
+        <div class="pricing-card">
+          <div class="pricing-card-inner">
+            <div class="pricing-card-header"></div>
+            <div class="pricing-card-title">Starter</div>
+            <div class="pricing-card-desc">Perfect for individuals and small teams getting started</div>
+            <div class="pricing-card-price">$0 <span class="pricing-card-duration">/month</span></div>
+            <ul class="pricing-features">
+              <li><i class="bi bi-check2-circle"></i> 5 reports per month</li>
+              <li><i class="bi bi-check2-circle"></i> 3 basic templates</li>
+              <li><i class="bi bi-check2-circle"></i> CSV &amp; Excel support</li>
+              <li><i class="bi bi-check2-circle"></i> PDF export</li>
+              <li><i class="bi bi-check2-circle"></i> Email support</li>
+            </ul>
+            <a href="#" class="pricing-btn pricing-btn-outline">Get Started Free</a>
+          </div>
+        </div>
+        <!-- Professional -->
+        <div class="pricing-card pricing-card-pro">
+          <div class="pricing-card-inner">
+            <div class="pricing-card-header">
+              <span class="pricing-badge">Most Popular</span>
+            </div>
+            <div class="pricing-card-title">Professional</div>
+            <div class="pricing-card-desc">Ideal for growing teams and businesses</div>
+            <div class="pricing-card-price">$29 <span class="pricing-card-duration">/month</span></div>
+            <ul class="pricing-features">
+              <li><i class="bi bi-check2-circle"></i> Unlimited reports</li>
+              <li><i class="bi bi-check2-circle"></i> 8+ premium templates</li>
+              <li><i class="bi bi-check2-circle"></i> All file formats (50+)</li>
+              <li><i class="bi bi-check2-circle"></i> Custom rules engine</li>
+              <li><i class="bi bi-check2-circle"></i> Advanced visualizations</li>
+              <li><i class="bi bi-check2-circle"></i> Priority support</li>
+            </ul>
+            <a href="#" class="pricing-btn pricing-btn-primary">Start Free Trial</a>
+          </div>
+        </div>
+        <!-- Enterprise -->
+        <div class="pricing-card">
+          <div class="pricing-card-inner">
+            <div class="pricing-card-header"></div>
+            <div class="pricing-card-title">Enterprise</div>
+            <div class="pricing-card-desc">Advanced features for large organizations</div>
+            <div class="pricing-card-price">$99 <span class="pricing-card-duration">/month</span></div>
+            <ul class="pricing-features">
+              <li><i class="bi bi-check2-circle"></i> Everything in Professional</li>
+              <li><i class="bi bi-check2-circle"></i> AI-powered insights</li>
+              <li><i class="bi bi-check2-circle"></i> Team collaboration</li>
+              <li><i class="bi bi-check2-circle"></i> SSO &amp; advanced security</li>
+              <li><i class="bi bi-check2-circle"></i> Dedicated account manager</li>
+              <li><i class="bi bi-check2-circle"></i> 24/7 phone support</li>
+            </ul>
+            <a href="#" class="pricing-btn pricing-btn-outline">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section py-5">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-2" style="font-size:2.2rem;">Trusted by 10,000+ Professionals</h2>
+      <p class="lead text-center mb-5" style="max-width: 600px; margin: 0 auto;">See how teams across industries are transforming their data<br>workflows with EZREPORT</p>
+      <div class="testimonials-grid">
+        <!-- Featured Testimonial -->
+        <div class="testimonial-card testimonial-featured">
+          <div class="testimonial-quote-icon"><i class="bi bi-quote"></i></div>
+          <div class="testimonial-quote">"EZREPORT has completely transformed how we handle quarterly reports. What used to take our team 3 days now takes 30 minutes. The AI insights have helped us identify trends we never would have spotted manually."</div>
+          <div class="testimonial-user-row">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Chen" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-user-name">Sarah Chen</div>
+              <div class="testimonial-user-title">VP of Analytics, TechCorp</div>
+              <div class="testimonial-user-badge">500+ employees</div>
+            </div>
+          </div>
+          <div class="testimonial-featured-stats">
+            <div><span class="testimonial-featured-stat">95%</span><span class="testimonial-featured-label">Time Saved</span></div>
+            <div><span class="testimonial-featured-stat">$50K</span><span class="testimonial-featured-label">Annual Savings</span></div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">"The template variety is incredible. We use different layouts for different stakeholders - executives love the executive summary template, while our analysts prefer the detailed breakdown views."</div>
+          <div class="testimonial-user-row">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Rodriguez" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-user-name">Marcus Rodriguez</div>
+              <div class="testimonial-user-title">Data Manager, RetailPlus</div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">"As a small business owner, I don't have time to learn complex analytics tools. EZREPORT makes it so simple - upload, click, done. Professional reports every time."</div>
+          <div class="testimonial-user-row">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emily Watson" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-user-name">Emily Watson</div>
+              <div class="testimonial-user-title">Founder, GrowthLab</div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">"The export quality is outstanding. Our board presentations look incredibly professional, and the interactive charts help tell our data story effectively."</div>
+          <div class="testimonial-user-row">
+            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="David Kim" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-user-name">David Kim</div>
+              <div class="testimonial-user-title">CFO, InnovateCo</div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 5 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">"The file format support is amazing. We work with data from multiple sources - CSV from sales, Excel from finance, JSON from our API. EZREPORT handles it all seamlessly."</div>
+          <div class="testimonial-user-row">
+            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Lisa Park" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-user-name">Lisa Park</div>
+              <div class="testimonial-user-title">Operations Director, DataFlow</div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 6 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">"Security was our biggest concern, but EZREPORT's SOC 2 compliance and enterprise features gave us confidence. Now our entire team uses it for sensitive financial reports."</div>
+          <div class="testimonial-user-row">
+            <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="James Wilson" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-user-name">James Wilson</div>
+              <div class="testimonial-user-title">IT Director, SecureBank</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-stats-row">
+        <div class="testimonial-stat"><span class="testimonial-stat-value">4.9/5</span><span class="testimonial-stat-label">Average Rating</span></div>
+        <div class="testimonial-stat"><span class="testimonial-stat-value">10,000+</span><span class="testimonial-stat-label">Active Users</span></div>
+        <div class="testimonial-stat"><span class="testimonial-stat-value">500K+</span><span class="testimonial-stat-label">Reports Generated</span></div>
+        <div class="testimonial-stat"><span class="testimonial-stat-value">99.9%</span><span class="testimonial-stat-label">Uptime</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <div class="contact-left">
+        <h2 class="contact-heading">Contact Information</h2>
+        <p class="contact-support">We're here to help you succeed with data-driven reporting and analytics.</p>
+        <ul class="contact-info-list">
+          <li><span class="contact-icon" aria-hidden="true">📞</span> <a href="tel:+18001234567" class="contact-link" target="_blank" rel="noopener" aria-label="Call us">+1 800-123-4567</a></li>
+          <li><span class="contact-icon" aria-hidden="true">✉️</span> <a href="mailto:support@ezreports.com" class="contact-link" target="_blank" rel="noopener" aria-label="Email us">support@ezreports.com</a></li>
+          <li><span class="contact-icon" aria-hidden="true">📍</span> <span class="contact-link">New York, USA</span></li>
+        </ul>
+        <div class="contact-socials">
+          <a href="#" class="contact-social" aria-label="Twitter" target="_blank" rel="noopener"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="contact-social" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="contact-social" aria-label="GitHub" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <h3 class="contact-form-heading">Get In Touch</h3>
+        <form id="contactForm" novalidate>
+          <div class="contact-form-row">
+            <div class="contact-form-group">
+              <label for="contactName">Your Name</label>
+              <input type="text" id="contactName" name="name" aria-label="Your Name" placeholder="Your Name" required autocomplete="name">
+            </div>
+            <div class="contact-form-group">
+              <label for="contactEmail">Your Email</label>
+              <input type="email" id="contactEmail" name="email" aria-label="Your Email" placeholder="you@email.com" required autocomplete="email">
+            </div>
+          </div>
+          <div class="contact-form-group">
+            <label for="contactSubject">Subject</label>
+            <input type="text" id="contactSubject" name="subject" aria-label="Subject" placeholder="Subject" required>
+          </div>
+          <div class="contact-form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" aria-label="Message" placeholder="Write your message here..." required rows="5" minlength="10"></textarea>
+          </div>
+          <button type="submit" class="contact-submit-btn">Send Message</button>
+          <div id="contactSuccess" class="contact-success-message" aria-live="polite" style="display:none;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-dark pt-6 pb-3 ">
+    <div class="container">
+      <div class="row align-items-start gy-4">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="d-flex align-items-center mb-3">
+            <img src="images/logo.png" alt="ezreports logo" width="40" height="40" class="me-2">
+            <span class="fw-bold fs-4">ezreports</span>
+          </div>
+          <p class="text-footer-muted mb-4" style="max-width: 320px;">Transform your data into actionable insights with our comprehensive analytics platform. Trusted by teams worldwide.</p>
+          <div class="d-flex gap-3 mb-2">
+            <a href="#" class="footer-social"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="footer-social"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="footer-social"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+          <div class="fw-semibold mb-2">Product</div>
+          <ul class="list-unstyled text-footer-muted">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How it Works</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+          <div class="fw-semibold mb-2">Resources</div>
+          <ul class="list-unstyled text-footer-muted">
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6">
+          <div class="fw-semibold mb-2">Company</div>
+          <ul class="list-unstyled text-footer-muted">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-footer-muted small">
+        <div class="mb-2 mb-md-0">&copy; 2025 ezreports. All rights reserved.</div>
+        <div class="d-flex gap-3">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Steps Progress Bar & Animation for How it Works Stepper
+    document.addEventListener('DOMContentLoaded', function() {
+      const steps = document.querySelectorAll('.step-card');
+      const progressBar = document.getElementById('stepsProgressBar');
+      const tooltip = document.getElementById('stepTooltip');
+      // Progress bar on hover/focus
+      steps.forEach((step, idx) => {
+        step.addEventListener('mouseenter', () => {
+          progressBar.style.width = ((idx+1)/steps.length*100) + '%';
+          steps.forEach(s => s.classList.remove('active'));
+          step.classList.add('active');
+        });
+        step.addEventListener('focus', () => {
+          progressBar.style.width = ((idx+1)/steps.length*100) + '%';
+          steps.forEach(s => s.classList.remove('active'));
+          step.classList.add('active');
+        });
+        step.addEventListener('mouseleave', () => {
+          progressBar.style.width = '0%';
+          step.classList.remove('active');
+        });
+        step.addEventListener('blur', () => {
+          progressBar.style.width = '0%';
+          step.classList.remove('active');
+        });
+        // Tooltip on click/focus
+        step.addEventListener('click', e => {
+          const desc = step.querySelector('.step-desc').textContent;
+          tooltip.textContent = desc;
+          tooltip.style.display = 'block';
+          const rect = step.getBoundingClientRect();
+          tooltip.style.top = (window.scrollY + rect.bottom + 8) + 'px';
+          tooltip.style.left = (window.scrollX + rect.left + rect.width/2 - tooltip.offsetWidth/2) + 'px';
+        });
+        step.addEventListener('blur', () => { tooltip.style.display = 'none'; });
+      });
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.step-card')) tooltip.style.display = 'none';
+      });
+      // Animate cards in on scroll
+      const observer = new window.IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+      }, { threshold: 0.2 });
+      steps.forEach(step => observer.observe(step));
+    });
+
+    // Contact form validation and feedback
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      const successMsg = document.getElementById('contactSuccess');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Simple validation
+        const name = form.contactName.value.trim();
+        const email = form.contactEmail.value.trim();
+        const subject = form.contactSubject.value.trim();
+        const message = form.contactMessage.value.trim();
+        let valid = true;
+        // Reset errors
+        form.querySelectorAll('input, textarea').forEach(el => {
+          el.classList.remove('contact-error');
+        });
+        if (!name) { valid = false; form.contactName.classList.add('contact-error'); }
+        if (!email || !/^\S+@\S+\.\S+$/.test(email)) { valid = false; form.contactEmail.classList.add('contact-error'); }
+        if (!subject) { valid = false; form.contactSubject.classList.add('contact-error'); }
+        if (!message) { valid = false; form.contactMessage.classList.add('contact-error'); }
+        if (!valid) {
+          successMsg.style.display = 'block';
+          successMsg.textContent = 'Please fill in all fields with valid information.';
+          successMsg.classList.remove('success');
+          return;
+        }
+        // Success
+        successMsg.style.display = 'block';
+        successMsg.textContent = 'Thank you! Your message has been sent.';
+        successMsg.classList.add('success');
+        form.reset();
+        setTimeout(() => { successMsg.style.display = 'none'; }, 4000);
+      });
+    });
+  </script>
+</body>
+</html>
