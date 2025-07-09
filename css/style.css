@@ -400,6 +400,25 @@ footer a:hover {
 .footer-dark .fs-4 {
   color: #fff;
 }
+.footer-dark .text-footer-muted {
+  font-size: 1.08rem;
+  max-width: 320px;
+  margin-bottom: 1.2rem;
+}
+@media (max-width: 991px) {
+  .footer-dark .text-footer-muted {
+    font-size: 1rem;
+    max-width: 90vw;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .footer-dark .text-footer-muted {
+    font-size: 0.97rem;
+    max-width: 98vw;
+    margin-bottom: 0.7rem;
+  }
+}
 
 /* Data-Driven Decisions Section Styles */
 .data-driven-section {
@@ -662,6 +681,57 @@ footer a:hover {
   .steps-cards-row { min-width: 600px; }
   .step-card { min-width: 180px; max-width: 220px; padding: 1rem; }
   .steps-section { padding-top: 2rem; padding-bottom: 2rem; }
+}
+@media (max-width: 600px) {
+  .steps-section {
+    padding: 1.2rem 0 1.2rem 0;
+  }
+  .steps-cards-row {
+    flex-direction: column;
+    min-width: 0;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: stretch;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  .step-card {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+    border-radius: 10px;
+    margin-bottom: 0.3rem;
+  }
+  .step-title {
+    font-size: 0.93rem;
+  }
+  .step-heading {
+    font-size: 0.98rem;
+    margin-bottom: 0.2rem;
+  }
+  .step-desc {
+    font-size: 0.89rem;
+  }
+  .step-icon {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .steps-progress-bar-wrapper {
+    margin-top: 0.7rem;
+    height: 4px;
+  }
+  .steps-progress-bar-bg,
+  .steps-progress-bar-fill {
+    height: 4px;
+    border-radius: 2px;
+  }
+  .step-tooltip {
+    font-size: 0.89rem;
+    min-width: 100px;
+    max-width: 90vw;
+    padding: 0.5rem 0.7rem;
+  }
 }
 
 /* --- Modern Contact Section Styles --- */
@@ -1477,6 +1547,68 @@ footer a:hover {
     font-size: 1.5rem;
   }
 }
+@media (max-width: 600px) {
+  .pricing-section {
+    padding: 1.2rem 0 1.2rem 0;
+  }
+  .pricing-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  .pricing-subtitle {
+    font-size: 0.98rem;
+    margin-bottom: 1.2rem;
+  }
+  .pricing-cards-row {
+    flex-direction: column;
+    gap: 0.7rem;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+  .pricing-card,
+  .pricing-card-pro {
+    max-width: 98vw;
+    min-width: 0;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(26,35,126,0.07);
+    margin-bottom: 0.7rem;
+  }
+  .pricing-card-inner {
+    padding: 1.1rem 0.7rem 1.1rem 0.7rem;
+  }
+  .pricing-card-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.1rem;
+  }
+  .pricing-card-desc {
+    font-size: 0.93rem;
+    margin-bottom: 0.7rem;
+  }
+  .pricing-card-price {
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+  .pricing-card-duration {
+    font-size: 0.93rem;
+  }
+  .pricing-features {
+    margin-bottom: 1.1rem;
+  }
+  .pricing-features li {
+    font-size: 0.97rem;
+    margin-bottom: 0.4rem;
+    gap: 0.4em;
+  }
+  .pricing-btn {
+    font-size: 1rem;
+    padding: 0.7rem 0;
+    border-radius: 8px;
+  }
+  .pricing-badge {
+    font-size: 0.93rem;
+    padding: 0.15em 0.7em;
+  }
+}
 
 /* --- Testimonials Section Modern --- */
 .testimonials-section {
@@ -1690,6 +1822,88 @@ footer a:hover {
     margin-top: 1.2rem;
   }
 }
+@media (max-width: 600px) {
+  .testimonials-section {
+    padding: 1.2rem 0 1.2rem 0;
+  }
+  .testimonials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    max-width: 100vw;
+    margin: 0 auto 1rem auto;
+  }
+  .testimonial-card,
+  .testimonial-featured {
+    padding: 1rem 0.7rem 1rem 0.7rem;
+    border-radius: 12px;
+    min-width: 0;
+    max-width: 98vw;
+    box-shadow: 0 1px 8px rgba(99,102,241,0.07);
+    margin-bottom: 0.7rem;
+  }
+  .testimonial-featured {
+    order: -1;
+    min-height: 0;
+    width: 100%;
+    box-shadow: 0 2px 12px rgba(99,102,241,0.13);
+  }
+  .testimonial-quote {
+    font-size: 0.98rem;
+    margin-bottom: 1rem;
+  }
+  .testimonial-user-row {
+    gap: 0.7rem;
+    margin-bottom: 0.7rem;
+    margin-top: 0.7rem;
+  }
+  .testimonial-avatar {
+    width: 36px;
+    height: 36px;
+  }
+  .testimonial-user-name {
+    font-size: 0.98rem;
+  }
+  .testimonial-user-title {
+    font-size: 0.93rem;
+  }
+  .testimonial-featured-stats {
+    gap: 1.1rem;
+    margin-top: 0.7rem;
+  }
+  .testimonial-featured-stat {
+    font-size: 1.05rem;
+  }
+  .testimonial-featured-label {
+    font-size: 0.93rem;
+  }
+  .testimonial-stars {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .testimonial-stats-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+    margin-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+  }
+  .testimonial-stat {
+    flex: 1 1 0;
+    align-items: center;
+    text-align: center;
+    gap: 0.1em;
+    min-width: 0;
+  }
+  .testimonial-stat-value {
+    font-size: 0.98rem;
+  }
+  .testimonial-stat-label {
+    font-size: 0.89rem;
+  }
+}
 
 /* --- Floating Dashboard Image --- */
 .dashboard-float-container {
@@ -1699,6 +1913,8 @@ footer a:hover {
   justify-content: center;
   margin-top: -120px;
   margin-bottom: 2.5rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 .dashboard-float-img {
   border-radius: 2rem;
@@ -1707,12 +1923,48 @@ footer a:hover {
   max-width: 900px;
   width: 100%;
   animation: dashboardFloat 4s ease-in-out infinite alternate;
+  display: block;
 }
 @keyframes dashboardFloat {
   0% { transform: translateY(0); }
   100% { transform: translateY(-18px); }
 }
-@media (max-width: 767px) {
-  .dashboard-float-container { margin-top: -60px; }
-  .dashboard-float-img { border-radius: 1.2rem; }
+@media (max-width: 991px) {
+  .dashboard-float-container {
+    margin-top: -60px;
+    margin-bottom: 1.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .dashboard-float-img {
+    max-width: 98vw;
+    border-radius: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .dashboard-float-container {
+    margin-top: -100px;
+    margin-bottom: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .dashboard-float-img {
+    max-width: 100vw;
+    border-radius: 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content{
+    max-width: 90vw;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+    line-height: 1.15;
+    margin-top: 8.5rem;
+    margin-bottom: 1.2rem;
+  }
+  /* .hero-lead {
+    display: none;
+  } */
 }

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Detail | ezreports</title>
+  <link rel="icon" href="images/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .blog-detail-hero {
+      background: linear-gradient(120deg, #7b5fd6 0%, #3b82f6 100%);
+      color: #fff;
+      padding: 3.5rem 0 2.5rem 0;
+      text-align: center;
+    }
+    .blog-detail-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.01em;
+    }
+    .blog-detail-meta {
+      color: #e0e7ff;
+      font-size: 1.08rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .blog-detail-tags {
+      display: flex;
+      gap: 0.7em;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .blog-detail-tag {
+      background: #6366f1;
+      color: #fff;
+      font-size: 0.93rem;
+      font-weight: 600;
+      border-radius: 999px;
+      padding: 0.18em 0.9em;
+      letter-spacing: 0.01em;
+    }
+    .blog-detail-img {
+      width: 100%;
+      max-width: 820px;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 32px rgba(60,60,130,0.10);
+      margin: 2.5rem auto 2rem auto;
+      display: block;
+      object-fit: cover;
+      max-height: 420px;
+    }
+    .blog-detail-body {
+      max-width: 820px;
+      margin: 0 auto 3rem auto;
+      background: #fff;
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 16px rgba(26,35,126,0.07);
+      padding: 2.2rem 1.5rem;
+      font-size: 1.13rem;
+      color: #23233a;
+      line-height: 1.7;
+    }
+    @media (max-width: 767px) {
+      .blog-detail-hero { padding: 1.5rem 0 1rem 0; }
+      .blog-detail-title { font-size: 1.2rem; }
+      .blog-detail-img { max-width: 98vw; border-radius: 0.7rem; }
+      .blog-detail-body { padding: 1.1rem 0.5rem; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="ezreports logo" width="40" height="40" class="me-2">
+        <span class="fw-bold fs-3" style="color: var(--color-primary, #1a1a40); font-family: 'Poppins', Inter, Arial, sans-serif;">ezreports</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Hero -->
+  <section class="blog-detail-hero">
+    <div class="container">
+      <h1 class="blog-detail-title">The Future of Reporting: Trends for 2025</h1>
+      <div class="blog-detail-meta">
+        <span><i class="bi bi-person-circle"></i> Alex Morgan</span>
+        <span><i class="bi bi-calendar-event"></i> Jan 10, 2025</span>
+        <div class="blog-detail-tags">
+          <span class="blog-detail-tag">Reporting</span>
+          <span class="blog-detail-tag">Trends</span>
+          <span class="blog-detail-tag">AI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Image -->
+  <img src="images/blog1.png" alt="The Future of Reporting: Trends for 2025" class="blog-detail-img">
+
+  <!-- Blog Body -->
+  <div class="blog-detail-body">
+    <p>Reporting is evolving rapidly as organizations demand more actionable insights, faster turnaround, and greater flexibility. In 2025, we expect to see a surge in AI-driven analytics, real-time dashboards, and automated report generation. These trends are transforming how businesses make decisions and stay competitive.</p>
+    <p><strong>Key trends to watch:</strong></p>
+    <ul>
+      <li><b>AI-Powered Insights:</b> Machine learning algorithms will surface trends and anomalies that humans might miss, making reports more valuable than ever.</li>
+      <li><b>Real-Time Dashboards:</b> Static reports are giving way to interactive dashboards that update instantly as new data arrives.</li>
+      <li><b>Self-Service Reporting:</b> Business users will increasingly create their own reports without IT intervention, thanks to intuitive drag-and-drop tools.</li>
+      <li><b>Data Security:</b> As more data is shared and visualized, robust security and compliance features are a must.</li>
+    </ul>
+    <p>At ezreports, we’re committed to helping you stay ahead of these trends with powerful, easy-to-use reporting tools. Whether you’re a small business or a large enterprise, our platform is designed to scale with your needs.</p>
+    <img src="images/blog2.png" alt="Reporting Example" style="width:100%;max-width:600px;border-radius:1rem;margin:2rem auto;display:block;">
+    <p>Ready to transform your reporting? <a href="contact.html">Contact us</a> for a personalized demo or <a href="pricing.html">explore our plans</a> to get started today.</p>
+  </div>
+
+  <div id="footer"></div>
+  <script src="js/footer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
